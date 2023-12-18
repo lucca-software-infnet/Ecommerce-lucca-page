@@ -1,0 +1,2 @@
+Churrasco;75;34567;carne, frango, linguica;750;false
+lasanha;55;45678;Massa, Queijo, Molho de Tomate;500;false

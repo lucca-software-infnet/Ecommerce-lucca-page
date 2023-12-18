@@ -1,0 +1,12 @@
+P;Primeiro pedido do dia;true;1
+B;1
+C;3
+B;2
+C;4
+S;5
+P;Segundo pedido do dia;true;2
+B;1
+C;3
+B;2
+C;4
+S;6

@@ -1,0 +1,13 @@
+P;Primeiro pedido do dia;true;lucca nicassio;1231445216524;lucca@hotmail.com
+B;cafe;10;12345;false;200;melita;
+C;Churrasco;75;34567;carne, frango, linguica;750;false
+B;cerveja;20;23456;true;500;skol
+C;lasanha;55;45678;Massa, Queijo, Molho de Tomate;500;false
+S;doce de chocolate;10;98765;1;true;chocolate amargo
+P;Segundo pedido do dia;true;matheus lopes; 123456758456; matheus@hotmail.com
+B;cafe 2;10;12345;false;200;melita;
+C;Churrasco;75;34567;carne, frango, linguica;750;false
+B;refri;10;12345;false;200;coca-cola
+C;Plasanha;55;45678;Massa, Queijo, Molho de Tomate;500;false
+B;cerveja;20;23456;true;500;skol
+S;brigadeiro;15;87665;2;true; leite moça

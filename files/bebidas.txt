@@ -1,0 +1,2 @@
+refri;10;12345;false;200;coca-cola
+cerveja;20;23456;true;500;skol
