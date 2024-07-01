@@ -1,6 +1,7 @@
 package EcommercePage.producingwebservice.model.service;
 
 import java.util.Collection;
+import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,9 @@ public class SobremesaService {
 
 	public void excluir(Integer id){
 		sobremesaRepository.deleteById(id);
+	}
+
+	public Sobremesa obterSobremesaPorId(int id) {
+		return sobremesaRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Sobremesa não encontrada"));
 	}
 }

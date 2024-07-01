@@ -26,4 +26,5 @@ public class BebidaService {
 	public void excluir(Integer id){
 		bebidaRepository.deleteById(id);
 	}
+
 }

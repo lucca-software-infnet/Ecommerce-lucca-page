@@ -11,52 +11,69 @@ import org.springframework.stereotype.Component;
 
 import EcommercePage.producingwebservice.model.domain.Endereco;
 import EcommercePage.producingwebservice.model.domain.Solicitante;
+import EcommercePage.producingwebservice.model.enums.UserRole;
 import EcommercePage.producingwebservice.model.service.EnderecoService;
 import EcommercePage.producingwebservice.model.service.SolicitanteService;
 
 
-
-@Order(1)
 @Component
+@Order(1)
 public class SolicitanteLoader implements ApplicationRunner {
-	
-	@Autowired
-	private SolicitanteService solicitanteService;
-	@Autowired
-	private EnderecoService enderecoService;
 
-	@Override
-	public void run(ApplicationArguments args) throws Exception {
+    @Autowired
+    private SolicitanteService solicitanteService;
 
-		FileReader file = new FileReader("files/solicitantes.txt");
-		BufferedReader leitura = new BufferedReader(file);
-		
-		String linha = leitura.readLine();
-		
-		String[] campos = null;
-		
-		while(linha != null) {
-			campos = linha.split(";");
+    @Autowired
+    private EnderecoService enderecoService;
 
-			String cep = campos[3];
-			Endereco endereco = enderecoService.buscaCep(cep);
 
-			Solicitante solicitante = new Solicitante();
-			solicitante.setNome(campos[0]);
-			solicitante.setCpf(campos[1]);
-			solicitante.setEmail(campos[2]);
-			solicitante.setEndereco(endereco);
-			
-			
-			solicitanteService.incluir(solicitante);
-			
-			linha = leitura.readLine();
-		}
+    @Override
+    public void run(ApplicationArguments args) throws Exception {
+        BufferedReader leitura = null;
+        
+            leitura = new BufferedReader(new FileReader("files/solicitantes.txt"));
+            String linha;
+            Solicitante solicitante = null;
 
-		for(Solicitante solicitante : solicitanteService.obterLista()) {
-			System.out.println("[SOLICITANTE] " + solicitante);			
-		}
-				
-		leitura.close();
-	}
+            while ((linha = leitura.readLine()) != null) {
+                String[] campos = linha.split(";");
+                
+                
+                        if (solicitante != null) {
+                            solicitanteService.incluir(solicitante);
+                        }
+                        solicitante = new Solicitante();
+                        solicitante.setNome(campos[0]);
+                        solicitante.setCpf(campos[1]);
+                        solicitante.setEmail(campos[2]);
+
+                        String cep = campos[3];
+                        Endereco endereco = enderecoService.buscaCep(cep);
+                        solicitante.setEndereco(endereco);
+                        solicitante.setPassword(campos[4]);
+                        if ("ADMIN".equalsIgnoreCase(campos[5])) {
+                            solicitante.setUserRole(UserRole.ADMIN);
+                        } else {
+                            solicitante.setUserRole(UserRole.USER);
+                        }
+                        
+                        
+                }
+            
+            if (solicitante != null) {
+                solicitanteService.incluir(solicitante);
+            }
+
+            for (Solicitante s : solicitanteService.obterLista()) {
+                System.out.println("[SOLICITANTE] " + s);
+            }
+        
+            if (leitura != null) {
+                leitura.close();
+            }
+        
+    }
 }
+
+
+

@@ -35,7 +35,7 @@ public abstract class Produto {
 	private String nome;
 	private float valor;
 	private int codigo;
-	
+
 	@ManyToMany(mappedBy = "produtos")
 	@JsonBackReference
 	private List<Pedido> pedidos;
@@ -87,4 +87,5 @@ public abstract class Produto {
 	public void setPedidos(List<Pedido> pedidos) {
 		this.pedidos = pedidos;
 	}
+	
 }

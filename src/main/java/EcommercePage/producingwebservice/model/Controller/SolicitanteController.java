@@ -34,4 +34,9 @@ public class SolicitanteController {
         solicitanteService.excluir(id);
     }
 
+    @GetMapping(value = "/{id}")
+    public Solicitante obterPorId(@PathVariable Integer id) {
+        return solicitanteService.obterPorId(id);
+    }
+
 }
