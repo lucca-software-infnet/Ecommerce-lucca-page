@@ -1,6 +1,7 @@
 package EcommercePage.producingwebservice.model.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -21,61 +22,28 @@ public class SecurityConfigurations {
     @Autowired
     SecurityFilter securityFilter;
 
-    @Bean 
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)
+            throws Exception {
         return httpSecurity
-            .csrf(csrf -> csrf.disable())
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(authorize -> authorize
-                .antMatchers(HttpMethod.POST, "/auth/login").permitAll()
-                .antMatchers(HttpMethod.POST, "/auth/register").hasRole("ADMIN")
-                .anyRequest().permitAll()
-            )
-            .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
-            .build();
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(authorize -> authorize
+                        .antMatchers(HttpMethod.POST, "/auth/login").permitAll()
+                        .antMatchers(HttpMethod.POST, "/auth/register").hasRole("ADMIN")
+                        .anyRequest().permitAll())
+                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
+            throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
 
-    @Bean 
+    @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }
-
-
-// @Configuration
-// @EnableWebSecurity
-// public class SecurityConfigurations {
-
-//     @Autowired
-//     SecurityFilter securityFilter;
-
-//     @Bean 
-//     public SecurityFilterChain securityFilterChain (HttpSecurity httpSecurity) throws Exception{
-//         return httpSecurity
-//             .csrf(csrf -> csrf.disable())
-//             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-//             .authorizeHttpRequests(authorize -> authorize
-//                 .antMatchers(HttpMethod.POST,"/auth/login").permitAll()
-//                     .antMatchers(HttpMethod.POST, "/auth/register").hasRole("ADMIN")
-//                     .anyRequest().permitAll()
-//                 )
-//         .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
-//         .build();
-//     }
-
-
-//     @Bean
-//     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-//         return authenticationConfiguration.getAuthenticationManager();
-//     }
-
-//     @Bean 
-//     public PasswordEncoder passwordEncoder(){
-//         return new BCryptPasswordEncoder();
-//     }
-// }
