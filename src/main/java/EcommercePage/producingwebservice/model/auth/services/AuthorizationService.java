@@ -23,49 +23,52 @@ import EcommercePage.producingwebservice.model.security.TokenService;
 import javax.validation.Valid;
 
 @Service
-public class AuthorizationService implements UserDetailsService{
-    @Autowired
-    private ApplicationContext context;
-    
-    @Autowired
-    private UserRepository userRepository;
+public class AuthorizationService implements UserDetailsService {
 
     @Autowired
-    private TokenService tokenService;
+    private ApplicationContext context; // Contexto da aplicação para obter o gerenciador de autenticação
 
-    private AuthenticationManager authenticationManager;
-    
+    @Autowired
+    private UserRepository userRepository; // Repositório para operações relacionadas aos usuários
+
+    @Autowired
+    private TokenService tokenService; // Serviço para geração de tokens de autenticação
+
+    private AuthenticationManager authenticationManager; // Gerenciador de autenticação
+
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        return userRepository.findByEmail(email);
-    } 
-
-    public ResponseEntity<Object> login(@RequestBody @Valid AuthenticationDto data){
-        authenticationManager = context.getBean(AuthenticationManager.class);
-
-        var usernamePassword = new UsernamePasswordAuthenticationToken(data.email(), data.password());
-        var auth = this.authenticationManager.authenticate(usernamePassword);
-        var token = tokenService.generateToken((Solicitante) auth.getPrincipal());
-        return ResponseEntity.ok(new LoginResponseDto(token));
+        return userRepository.findByEmail(email); // Busca um usuário pelo email no repositório
     }
 
+    // Método para lidar com a requisição de login
+    public ResponseEntity<Object> login(@RequestBody @Valid AuthenticationDto data) {
+        authenticationManager = context.getBean(AuthenticationManager.class); // Obtém o gerenciador de autenticação
+
+        var usernamePassword = new UsernamePasswordAuthenticationToken(data.email(), data.password());
+        var auth = this.authenticationManager.authenticate(usernamePassword); // Autentica o usuário com base nas credenciais
+        var token = tokenService.generateToken((Solicitante) auth.getPrincipal()); // Gera um token JWT para o usuário autenticado
+        return ResponseEntity.ok(new LoginResponseDto(token)); // Retorna uma resposta com o token de login
+    }
+
+    // Método para lidar com a requisição de registro de um novo usuário
     public ResponseEntity<Object> register(@RequestBody RegisterDto registerDto) {
-        // Verificar se o usuário já existe pelo email
+        // Verifica se o usuário já existe pelo email
         if (this.userRepository.findByEmail(registerDto.email()) != null) {
             return ResponseEntity.badRequest().build(); // Retorna bad request se o usuário já existir
         }
-    
-        // Não codificar novamente se a senha já estiver codificada
+
+        // Não codifica novamente se a senha já estiver codificada
         String encryptedPassword = registerDto.password();
-    
-        // Criar um novo usuário com os dados fornecidos
+
+        // Cria um novo usuário com os dados fornecidos
         Solicitante newUser = new Solicitante(registerDto.email(), encryptedPassword, registerDto.role());
         newUser.setCreatedAt(new Date(System.currentTimeMillis()));
-    
-        // Salvar o novo usuário no repositório
+
+        // Salva o novo usuário no repositório
         this.userRepository.save(newUser);
-    
-        // Retornar uma resposta de sucesso
+
+        // Retorna uma resposta de sucesso
         return ResponseEntity.ok().build();
     }
     

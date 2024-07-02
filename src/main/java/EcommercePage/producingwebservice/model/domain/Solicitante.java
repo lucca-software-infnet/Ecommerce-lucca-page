@@ -23,6 +23,7 @@ import javax.persistence.TemporalType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import EcommercePage.producingwebservice.model.enums.UserRole;
 
@@ -132,7 +133,8 @@ public Collection<? extends GrantedAuthority> getAuthorities() {
 
 
 	public void setPassword(String password) {
-		this.password = password;
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        this.password = encoder.encode(password);
 	}
 
 	public UserRole getUserRole() {

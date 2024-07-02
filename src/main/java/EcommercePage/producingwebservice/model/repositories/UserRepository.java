@@ -8,5 +8,7 @@ import EcommercePage.producingwebservice.model.domain.Solicitante;
 
 
 public interface UserRepository extends JpaRepository<Solicitante, Integer>{
+    // Método para buscar um usuário pelo email
     UserDetails findByEmail(String email);
 }
+
