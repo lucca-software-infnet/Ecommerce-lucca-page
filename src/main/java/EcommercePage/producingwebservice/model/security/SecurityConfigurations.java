@@ -26,7 +26,7 @@ public class SecurityConfigurations {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)
             throws Exception {
         return httpSecurity
-                .csrf(csrf -> csrf.disable()) // Desabilita CSRF
+                .csrf(csrf -> csrf.disable()) 
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) 
                 .authorizeHttpRequests(authorize -> authorize
                         .antMatchers(HttpMethod.POST, "/auth/login").permitAll() 
