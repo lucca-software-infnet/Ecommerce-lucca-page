@@ -1,0 +1,3 @@
+Arroz Integral;12.50;1001;Arroz integral, agua, sal;1.0;true;arroz_integral.jpg;Arroz integral cozido e temperado;Marca Boa;Grão;1
+Feijao Preto;8.75;1002;Feijao preto, agua, sal;1.0;true;feijao_preto.jpg;Feijão preto cozido e temperado;Legumes do Brasil;Grao;2
+Hamburguer Vegano;20.90;1003;Proteina de soja, especiarias;0.2;true;hamburguer_vegano.jpg;Hamburguer de soja temperado;VeggieTasty;lanche;3

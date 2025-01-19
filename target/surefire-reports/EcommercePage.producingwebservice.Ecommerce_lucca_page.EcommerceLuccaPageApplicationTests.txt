@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: EcommercePage.producingwebservice.Ecommerce_lucca_page.EcommerceLuccaPageApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.9 s <<< FAILURE! - in EcommercePage.producingwebservice.Ecommerce_lucca_page.EcommerceLuccaPageApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NoSuchMethodError: 'void org.springframework.boot.builder.SpringApplicationBuilder.<init>(java.lang.Object[])'
+

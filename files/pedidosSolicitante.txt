@@ -1,0 +1,12 @@
+P;Primeiro pedido do dia;true;lucca nicassio;1231445216524;lucca@hotmail.com
+B;Coca-Cola;10.00;7894900010015;true;Coca-Cola;600.00
+C;Arroz Integral;12.50;1001;Arroz integral, agua, sal;1.0;true;arroz_integral.jpg;Arroz integral cozido e temperado;Marca Boa;Grão;1231445216524
+B;Suco de Laranja;11.00;7894900020030;true;Del Valle;1.00;123456758456
+C;Feijao Preto;8.75;1002;Feijao preto, agua, sal;1.0;true;feijao_preto.jpg;Feijão preto cozido e temperado;Legumes do Brasil;Grao;123456758456
+S;doce de chocolate;10;98765;1;true;chocolate amargo
+P;Segundo pedido do dia;true;matheus lopes; 123456758456; matheus@hotmail.com
+B;Coca-Cola;10.00;7894900010015;true;Coca-Cola;600.00;1231445216524
+C;Hamburguer Vegano;20.90;1003;Proteina de soja, especiarias;0.2;true;hamburguer_vegano.jpg;Hamburguer de soja temperado;VeggieTasty;lanche
+B;Suco de Laranja;11.00;7894900020030;true;Del Valle;1.00
+C;Feijao Preto;8.75;1002;Feijao preto, agua, sal;1.0;true;feijao_preto.jpg;Feijão preto cozido e temperado;Legumes do Brasil;Grao;123456758456
+S;brigadeiro;15;87665;2;true; leite moca
