@@ -21,8 +21,7 @@ public class SecurityConfigurations {
 
     @Autowired
     SecurityFilter securityFilter;
-
-    // Configuração do filtro de segurança e das permissões das requisições
+    
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)
             throws Exception {
