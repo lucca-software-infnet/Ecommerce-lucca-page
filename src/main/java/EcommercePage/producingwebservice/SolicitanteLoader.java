@@ -15,7 +15,6 @@ import EcommercePage.producingwebservice.model.enums.UserRole;
 import EcommercePage.producingwebservice.model.service.EnderecoService;
 import EcommercePage.producingwebservice.model.service.SolicitanteService;
 
-
 @Component
 @Order(1)
 public class SolicitanteLoader implements ApplicationRunner {
@@ -55,9 +54,7 @@ public class SolicitanteLoader implements ApplicationRunner {
                             solicitante.setUserRole(UserRole.ADMIN);
                         } else {
                             solicitante.setUserRole(UserRole.USER);
-                        }
-                        
-                        
+                        }      
                 }
             
             if (solicitante != null) {

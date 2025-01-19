@@ -1,6 +1,5 @@
 package EcommercePage.producingwebservice;
 
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.time.LocalDateTime;
@@ -85,12 +84,9 @@ public class PedidoLoader implements ApplicationRunner {
             pedidoService.incluir(pedido);
             linha = leitura.readLine();
         }
-        
-        
         for(Pedido p : pedidoService.obterLista()) {
             System.out.println("[PEDIDO] " + p);			
-        }
-        
+        } 
         leitura.close();
     }
 }

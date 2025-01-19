@@ -61,14 +61,13 @@ public class Solicitante implements UserDetails {
 	}
 
 	@Override
-public Collection<? extends GrantedAuthority> getAuthorities() {
-    if (this.userRole == UserRole.ADMIN) {
-        return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
-    } else {
-        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
-    }
-}
-
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		if (this.userRole == UserRole.ADMIN) {
+			return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
+		} else {
+			return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+		}
+	}
 
 	public Solicitante(String string, String encryptedPassword, UserRole userRole) {
 
@@ -81,7 +80,6 @@ public Collection<? extends GrantedAuthority> getAuthorities() {
 	public Solicitante(Integer id) {
 		this.id = id;
 	}
-
 
 	public Solicitante(String nome, String cpf, String email, String password, UserRole userRole) {
 		this.nome = nome;
@@ -131,10 +129,9 @@ public Collection<? extends GrantedAuthority> getAuthorities() {
 		this.endereco = endereco;
 	}
 
-
 	public void setPassword(String password) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        this.password = encoder.encode(password);
+		this.password = encoder.encode(password);
 	}
 
 	public UserRole getUserRole() {

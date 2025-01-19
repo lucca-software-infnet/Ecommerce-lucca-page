@@ -1,7 +1,5 @@
 package EcommercePage.producingwebservice.model.domain;
 
-
-
 import javax.persistence.Entity;
 
 @Entity

@@ -28,24 +28,22 @@ public class SecurityConfigurations {
             throws Exception {
         return httpSecurity
                 .csrf(csrf -> csrf.disable()) // Desabilita CSRF
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Define política de criação de sessão
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) 
                 .authorizeHttpRequests(authorize -> authorize
-                        .antMatchers(HttpMethod.POST, "/auth/login").permitAll() // Permite acesso sem autenticação ao endpoint /auth/login
-                        .antMatchers(HttpMethod.POST, "/auth/register").hasRole("ADMIN") // Requer papel ADMIN para acessar /auth/register
-                        .antMatchers("/user/**").hasRole("USER") // Requer papel USER para acessar qualquer endpoint iniciado com /user/
-                        .anyRequest().permitAll()) // Permite acesso a qualquer outra requisição
-                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class) // Adiciona o filtro de segurança antes do filtro padrão de autenticação por usuário e senha
+                        .antMatchers(HttpMethod.POST, "/auth/login").permitAll() 
+                        .antMatchers(HttpMethod.POST, "/auth/register").hasRole("ADMIN") 
+                        .antMatchers("/user/**").hasRole("USER") 
+                        .anyRequest().permitAll()) 
+                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class) 
                 .build();
     }
 
-    // Configuração do gerenciador de autenticação
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
             throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
 
-    // Configuração do codificador de senha
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

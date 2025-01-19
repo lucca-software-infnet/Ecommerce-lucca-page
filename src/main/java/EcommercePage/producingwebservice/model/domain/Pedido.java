@@ -1,7 +1,5 @@
 package EcommercePage.producingwebservice.model.domain;
 
-
-
 import java.time.LocalDateTime;
 import java.util.List;
 

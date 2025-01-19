@@ -12,15 +12,9 @@ public class Bebida extends Produto {
     private String codigoDeBarras;
     private float peso;
     
-    
-
-   
-
-    // Construtor padrão
     public Bebida() {
     }
 
-    // Construtor com todos os atributos
     public Bebida(String nome, boolean gelada, String marca, float valor, String codigoDeBarras, float peso, Solicitante solicitante) {
         this.nome = nome;
         this.gelada = gelada;
@@ -30,7 +24,6 @@ public class Bebida extends Produto {
         this.peso = peso;
     }
 
-    // Método toString
     @Override
     public String toString() {
         return String.format(
@@ -38,7 +31,6 @@ public class Bebida extends Produto {
                 nome, valor, codigoDeBarras, gelada, marca, peso, super.toString());
     }
 
-    // Getters e Setters
     public String getNome() {
         return nome;
     }
@@ -126,41 +118,3 @@ public class Bebida extends Produto {
 
 }
 
-// @Entity
-// public class Bebida extends Produto {
-
-// private String nome;
-// private boolean gelada;
-// private float tamanho;
-// private String marca;
-// private float valor;
-// private Integer codigoDeBarras;
-
-// @Override
-// public String toString() {
-
-// return String.format("%s - gelada (%s) - tamanho (%.2f) - marca (%s) )",
-// super.toString(), gelada, tamanho, marca
-// );
-// }
-
-// public boolean isGelada() {
-// return gelada;
-// }
-// public void setGelada(boolean gelada) {
-// this.gelada = gelada;
-// }
-// public float getTamanho() {
-// return tamanho;
-// }
-// public void setTamanho(float tamanho) {
-// this.tamanho = tamanho;
-// }
-// public String getMarca() {
-// return marca;
-// }
-// public void setMarca(String marca) {
-// this.marca = marca;
-// }
-
-// }

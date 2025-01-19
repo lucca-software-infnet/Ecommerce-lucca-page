@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import EcommercePage.producingwebservice.model.domain.Endereco;
 
-
 @FeignClient(url ="https://viacep.com.br/ws", name = "enderecoClient")
 public interface IEnderecoClient {
     @GetMapping(value = "/{cep}/json/")
