@@ -1,4 +1,4 @@
 lucca nicassio;1231445216524;lucca@hotmail.com;22241-330;1234;ADMIN
-matheus lopes; 123456758456; matheus@hotmail.com;22020-001;5678;USER
-dante dias; 72665676786; dante@hotmail.com;01310-100;0987;USER
-Conde Alucard ; 46374330846; Alucard@hotmail.com;40026-280;2573;USER
+matheus lopes;123456758456;matheus@hotmail.com;22020-001;5678;USER
+dante dias;72665676786;dante@hotmail.com;01310-100;0987;USER
+Conde Alucard;46374330846;Alucard@hotmail.com;40026-280;2573;USER
