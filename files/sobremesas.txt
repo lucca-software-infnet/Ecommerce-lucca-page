@@ -1,2 +1,42 @@
-doce de chocolate;10;98765;1;true;chocolate amargo
-brigadeiro;15;87665;2;true; leite moca
+Bolo de Chocolate;15.90;2001;10;true;Bolo de chocolate com cobertura;Delicioso bolo de chocolate;bolo_chocolatedoce.jpg
+Pudim de Leite;9.90;2002;20;true;Pudim cremoso;Clássico pudim de leite;pudim_leite2.jpg
+Torta de Limão;12.50;2003;15;true;Torta de limão com merengue;Torta refrescante e azedinha;torta_limao2.jpg
+Brownie;8.90;2004;25;true;Bolo de chocolate denso;Delicioso brownie com nozes;brownie2.jpg
+Bolo de Cenoura;10.50;2005;30;true;Bolo de cenoura com cobertura de chocolate;Bolo fofinho e saboroso;bolo_cenoura2.jpg
+Pavê de Chocolate;14.90;2006;12;true;Pavê de chocolate com biscoitos;Delícia em camadas;pave_chocolate.jpg
+Gelatina Colorida;5.00;2007;50;true;Gelatina de vários sabores;Refrescante e divertida;gelatina_colorida.jpg
+Mousse de Maracujá;11.00;2008;18;true;Mousse leve e aerada;Sabor intenso de maracujá;mousse_maracuja.jpg
+Torta de Morango;13.90;2009;15;true;Torta de morango com creme;Deliciosa torta de morango;torta_morango.jpg
+Panna Cotta;16.50;2010;10;true;Dessert italiano cremoso;Delicada e saborosa;panna_cotta.jpg
+Bolo de Fubá;9.50;2011;20;true;Bolo de fubá com goiabada;Tradicional bolo mineiro;bolo_fuba2.jpg
+Crepe de Nutella;12.00;2012;25;true;Crepe recheado com Nutella;Delícia doce;crepe_nutella2.jpg
+Bolo de Baunilha;10.00;2015;30;true;Bolo de baunilha com cobertura;Clássico e saboroso;bolo_baunilha2.jpg
+Pudim de Chocolate;12.90;2016;20;true;Pudim de chocolate cremoso;Delícia de chocolate;pudim_chocolate2.jpg
+Bolo de Limão;13.50;2017;15;true;Bolo de limão com cobertura;Refrescante e saboroso;bolo_limao2.jpg
+Torta de Nozes;15.00;2018;12;true;Torta crocante de nozes;Deliciosa e rica;torta_nozes.jpg
+Gelato de Frutas;9.90;2019;25;true;Gelato artesanal de frutas;Refrescante e cremoso;gelato_frutas.jpg
+Bolo de Morango;14.90;2020;10;true;Bolo de morango com chantilly;Delicioso e fresco;bolo_morango2.jpg
+Mousse de Chocolate;11.50;2021;18;true;Mousse leve de chocolate;Delícia cremosa;mousse_chocolate.jpg
+Pudim de Coco;10.50;2022;20;true;Pudim de coco cremoso;Delícia tropical;pudim_coco.jpg
+Torta de Chocolate;15.90;2023;10;true;Torta de chocolate com recheio;Deliciosa e rica;torta_chocolate.jpg
+Bolo de Rolo;12.00;2024;15;true;Bolo de rolo tradicional;Delícia pernambucana;bolo_rolo.jpg
+Pavê de Frutas;14.00;2025;12;true;Pavê com frutas da estação;Refrescante e saboroso;pave_frutas.jpg
+Bolo de Maracujá;11.00;2026;20;true;Bolo de maracujá com cobertura;Delícia tropical;bolo_maracuja.jpg
+Torta de Chocolate Branco; 16.50;2027;10;true;Torta de chocolate branco;Delícia suave;torta_chocolate_branco.jpg
+Gelatina de Frutas;6.00;2028;50;true;Gelatina com pedaços de frutas;Refrescante e colorida;gelatina_frutas.jpg
+Mousse de Limão;12.00;2029;18;true;Mousse leve de limão;Sabor refrescante;mousse_limao.jpg
+Bolo de Café;13.50;2030;15;true;Bolo de café com cobertura;Delícia para os amantes de café;bolo_cafe.jpg
+Torta de Ricota;14.90;2031;10;true;Torta de ricota com frutas;Deliciosa e leve;torta_ricota.jpg
+Pudim de Leite Condensado;9.90;2032;20;true;Pudim cremoso de leite condensado;Clássico e saboroso;pudim_leite_condensado.jpg
+Bolo de Chocolate Branco;15.00;2033;12;true;Bolo de chocolate branco com frutas;Delícia suave e doce;bolo_chocolate_branco.jpg
+Torta de Limão Siciliano;16.00;2034;10;true;Torta de limão siciliano;Refrescante e azedinha;torta_limao_siciliano.jpg
+Bolo de Nozes;14.50;2035;15;true;Bolo de nozes com cobertura;Delícia crocante;bolo_nozes.jpg
+Pavê de Café;11.00;2036;18;true;Pavê de café com biscoitos;Delícia em camadas,mousse_cafe.jpg
+Bolo de Abacaxi;12.90;2037;20;true;Bolo de abacaxi com cobertura;Refrescante e tropical;bolo_abacaxi.jpg
+Torta de Pêssego;13.50;2038;15;true;Torta de pêssego com creme;Deliciosa e doce;torta_pessego.jpg
+Pudim de Maracujá;11.50;2041;20;true;Pudim de maracujá cremoso;Delícia tropical;pudim_maracuja.jpg
+Bolo de Caramelo;12.00;2043;15;true;Bolo de caramelo com cobertura;Delícia doce e cremosa;bolo_caramelo.jpg
+Gelato de Chocolate;9.90;2044;25;true;Gelato artesanal de chocolate;Refrescante e cremoso;gelato_chocolate.jpg
+Bolo de Limão com Coco;14.90;2045;10;true;Bolo de limão com coco;Delícia tropical;bolo_limao_coco.jpg
+Bolo de Chocolate com Avelã;15.00;2048;10;true;Bolo de chocolate com avelã;Delícia crocante;bolo_chocolate_avelas.jpg
+Mousse de Chocolate Branco;12.90;2050;20;true;Mousse de chocolate branco;Delícia suave e cremosa;mousse_chocolate_branco.jpg

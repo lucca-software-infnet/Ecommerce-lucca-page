@@ -17,7 +17,8 @@ public class Comida extends Produto {
     private String marca;
     private String tipo;
     private float valor;
-    private Integer codigoDeBarras;
+    
+    
     
      @OneToOne(cascade = CascadeType.DETACH)
 	 @JoinColumn(name = "idSolicitante")
@@ -30,7 +31,7 @@ public class Comida extends Produto {
     }
 
     public Comida(String imagem, String nome, float peso, boolean vegana, String ingredientes, String descricao,
-            String marca, String tipo, float valor, Integer codigoDeBarras, Solicitante solicitante) {
+            String marca, String tipo, float valor, Solicitante solicitante) {
         this.imagem = imagem;
         this.nome = nome;
         this.peso = peso;
@@ -40,16 +41,15 @@ public class Comida extends Produto {
         this.marca = marca;
         this.tipo = tipo;
         this.valor = valor;
-        this.codigoDeBarras = codigoDeBarras;
-         this.solicitante = solicitante;
+        this.solicitante = solicitante;
         
     }
 
     @Override
     public String toString() {
         return String.format(
-                "Comida [  nome (%s) - valor(%.2f) - codigoDeBarras(%d) - ingredientes(%s) - peso (%.2f) - vegana(%s) - imagem (%s) - descricao (%s) - marca (%s) - tipo (%s) - solicitante (%s) ]",
-                nome, valor, codigoDeBarras, ingredientes, peso, vegana, imagem, descricao, marca, tipo,solicitante,
+                "Comida [  nome (%s) - valor(%.2f)   - ingredientes(%s) - peso (%.2f) - vegana(%s) - imagem (%s) - descricao (%s) - marca (%s) - tipo (%s) - solicitante (%s) ]",
+                nome, valor, ingredientes, peso, vegana, imagem, descricao, marca, tipo,solicitante,
                 super.toString());
     }
 
@@ -125,13 +125,6 @@ public class Comida extends Produto {
         this.valor = valor;
     }
 
-    public Integer getCodigoDeBarras() {
-        return codigoDeBarras;
-    }
-
-    public void setCodigoDeBarras(Integer codigoDeBarras) {
-        this.codigoDeBarras = codigoDeBarras;
-    }
 
     public Solicitante getSolicitante() {
         return solicitante;

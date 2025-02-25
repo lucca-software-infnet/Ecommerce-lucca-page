@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-bottom: 200px;
+
+}
+
+form {
+    width: 80%;
+    position: relative;
+    height: 50px;
+}
+
+
+.collapse {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.carouseldois{
+    margin-top: 150px;
+    position: relative;
+}
+
+.container {
+    height: 150px;
+}
+
+.navbar {
+    background-color: #6a0dad;
+    height: 150px;
+    /* Ajuste a altura da navbar */
+    z-index: 100;
+    
+}
+
+
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    /* Cor da marca */
+}
+
+.navbar-brand:hover {
+    color: #ddd;
+    /* Cor ao passar o mouse */
+}
+
+#link-navbar{
+  color: white;
+}
+
+
+#navbarNav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+
+.search-bar {
+    width: 100%;
+    max-width: 80%;
+    /* Ajuste a largura do campo de busca */
+    margin: 0 20px;
+    /* Margem para espaçamento */
+}
+
+#botao {
+    background-color: white;
+    color: black;
+    border: none;
+   
+}
+
+
+
+.btn-search:hover {
+    background-color: #555;
+}
+
+
+
+#mainCarousel {
+    height: 30vw; 
+    background-color: rgba(85, 85, 85, 0.486);
+    position: relative;
+  }
+  
+  #mainCarousel .carousel-inner {
+    height: 100%; 
+  }
+  
+  #mainCarousel img {
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%; 
+  }
+  #v{
+    object-fit: cover; 
+    height: 100%;
+  }
+  
+  
+
+  .d-block{
+    object-fit: cover;
+    height: 100%;  
+  }
+
+  .gridproduto1{
+    margin-top: 100px;
+    position: relative;
+    height: auto;
+  }
+  
+  .gridproduto2{
+    margin-top: 100px;
+    position: relative;
+    height: auto;
+  }
+
+  .col{
+    border: 2px solid black;
+    width: 50px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .imagemGrid1{
+    
+    border: 2px solid purple;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .imagemGrid6{
+    
+    width: 80%;
+    height: 100%;
+    
+  }
+ 
+
+
+  button{
+    border: 2px solid blue;
+  }
+
+/* ------------------------------------------- */
+
+  body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+#button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #218838;
+}
+
+.search-bar {
+  position: relative; /* Necessário para o posicionamento absoluto do suggestions */
+}
+
+.suggestions {
+  position: absolute; /* Permite que o div de sugestões se sobreponha ao input */
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none; /* Inicialmente oculto */
+  width: 100%; /* Faz o container ocupar 100% da largura do input */
+  top: 100%; /* Coloca o suggestions logo abaixo do input */
+  left: 0; /* Alinha à esquerda do input */
+  margin-top: 5px; /* Espaço entre o input e o suggestions */
+}
+
+
+.suggestion-item:hover {
+  background-color: rgba(168, 168, 168, 0.562);
+}
+
+
+@media (max-width: 991px) {
+    .search-bar {
+        margin: 10px 0;
+    }
+}

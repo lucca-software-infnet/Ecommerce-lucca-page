@@ -1,3 +1,44 @@
-Arroz Integral;12.50;1001;Arroz integral, agua, sal;1.0;true;arroz_integral.jpg;Arroz integral cozido e temperado;Marca Boa;Grão;1
-Feijao Preto;8.75;1002;Feijao preto, agua, sal;1.0;true;feijao_preto.jpg;Feijão preto cozido e temperado;Legumes do Brasil;Grao;2
-Hamburguer Vegano;20.90;1003;Proteina de soja, especiarias;0.2;true;hamburguer_vegano.jpg;Hamburguer de soja temperado;VeggieTasty;lanche;3
+Pizza Margherita;29.90;1001;Massa, molho de tomate, queijo, manjericão;500;false;pizza_margherita.jpg;Pizza clássica italiana;Pizzaria Bella;Pizza;1;1
+Hambúrguer Vegano;19.90;1002;Pão, hambúrguer de grão-de-bico, alface, tomate;250;true;hamburguer_vegano.jpg;Delicioso hambúrguer vegano;Burger House;Hambúrguer;2;2
+Sushi de Salmão;39.90;1003;Arroz, alga, salmão, abacate;300;false;sushi_salmao.jpg;Sushi fresco e saboroso;Sushi Place;Sushi;3;3
+Salada Caesar;24.90;1004;Alface, croutons, frango, molho Caesar;200;false;salada_caesar.jpg;Salada clássica;Salad Bar;Salada;4;4
+Tacos Veganos;22.90;1005;Tortilha, feijão, abacate, salsa;150;true;tacos_veganos.jpg;Tacos saborosos e saudáveis;Mexican Grill;Taco;5;1
+Espaguete à Bolonhesa;27.90;1006;Massa, carne moída, molho de tomate;400;false;espaguete_bolonhesa.jpg;Clássico italiano;Pasta House;Massa;6;2
+Bolo de Chocolate;15.90;1007;Farinha, açúcar, chocolate, ovos;300;false;bolo_chocolate.jpg;Bolo fofinho e saboroso;Sweet Treats;Sobremesa;7;3
+Açaí na Tigela;19.90;1008;Açaí, granola, banana, mel;250;true;acai_tigela.jpg;Refrescante e nutritivo;Açaí Shop;Sobremesa;8;4
+Pão de Queijo;12.90;1009;Queijo, polvilho, ovos;150;false;pao_queijo.jpg;Delícia mineira;Pão de Queijo Shop;Snack;9;1
+Coxinha;10.50;1010;Massa, frango desfiado;300;false;coxinha.jpg;Tradicional coxinha brasileira;Coxinha Mania;Snack;10;2
+Quiche de Alho-Poró;18.90;1011;Massa, alho-poró, queijo, ovos;350;false;quiche_alho_poro.jpg;Quiche saborosa;Quiche & Cia;Massa;11;3
+Pasta de Amendoim;14.90;1012;Amendoim, sal;100;false;pasta_amendoim.jpg;Perfeita para lanches;Peanut Butter Co.;Condimento;12;4
+Brownie;8.90;1013;Chocolate, açúcar, ovos;200;false;brownie.jpg;Bolo de chocolate denso;Sweet Treats;Sobremesa;13;1
+Wrap de Frango;20.90;1014;Pão sírio, frango, alface, tomate;250;false;wrap_frango.jpg;Wrap saudável;Wraps & Salads;Sandwich;14;2
+Sopa de Legumes;15.50;1015;Legumes variados, caldo;200;true;sopa_legumes.jpg;Sopa nutritiva;Sopa do Dia;Sopa;15;3
+Pudim de Leite;9.90;1016;Leite, açúcar, ovos;250;false;pudim_leite.jpg;Sobremesa clássica;Sweet Treats;Sobremesa;16;4
+Torta de Limão;11.90;1017;Massa, limão, açúcar;300;false;torta_limao.jpg;Torta refrescante;Sweet Treats;Sobremesa;17;1
+Chili com Carne;22.50;1018;Carne moída, feijão, tomate;300;false;chili_carne.jpg;Prato apimentado;Mexican Grill;Prato Principal;18;2
+Pasta ao Pesto;26.90;1019;Massa, manjericão, pinhão, queijo;400;false;pasta_pesto.jpg;Massa com molho pesto;Pasta House;Massa;19;3
+maça;10.00;1020;maça;0;true;maca.jpg;Refrescante e saudável;Frutaria;Salada;20;4
+Burguer de Lentilha;18.90;1021;Pão, lentilha, alface, tomate;250;true;burguer_lentilha.jpg;Alternativa vegana;Burger House;Hambúrguer;21;1
+Pão Integral;5.50;1022;Farinha integral, água, fermento;100;true;pao_integral.jpg;Pão saudável;Pão Integral Shop;Pão;22;2
+Torta de Frango;21.90;1023;Massa, frango, milho;300;false;torta_frango.jpg;Torta recheada;Tortas & Cia;Massa;23;3
+Crepe de Nutella;12.50;1024;Massa, Nutella, banana;200;false;crepe_nutella.jpg;Delícia doce;Creperia;Crepe;24;4
+Salada de Quinoa;19.90;1025;Quinoa, legumes, azeite;250;true;salada_quinoa.jpg;Salada nutritiva;Salad Bar;Salada;25;1
+Bolo de Cenoura;15.00;1026;Cenoura, farinha, açúcar;200;false;bolo_cenoura.jpg;Bolo fofinho;Sweet Treats;Sobremesa;26;2
+Pasta de Atum;17.90;1027;Massa, atum, maionese;300;false;pasta_atum.jpg;Pasta saborosa;Pasta House;Massa;27;3
+Sushi Vegano;35.90;1028;Arroz, alga, legumes;250;true;sushi_vegano.jpg;Sushi saudável;Sushi Place;Sushi;28;4
+Ceviche;29.90;1029;Peixe, limão, cebola;200;false;ceviche.jpg;Prato refrescante;Peruano;Prato Principal;29;1
+Bolo de Fubá;10.00;1030;Fubá, açúcar, ovos;300;false;bolo_fuba.jpg;Bolo tradicional;Sweet Treats;Sobremesa;30;2
+Pasta Carbonara;28.90;1031;Massa, bacon, ovos, queijo;400;false;pasta_carbonara.jpg;Clássico italiano;Pasta House;Massa;31;3
+Tapioca;8.00;1032;Polvilho, recheio a gosto;150;true;tapioca.jpg;Lanche saudável;Tapiocaria;Snack;32;4
+Pudim de Chocolate;11.50;1033;Chocolate, leite, açúcar;250;false;pudim_chocolate.jpg;Sobremesa cremosa;Sweet Treats;Sobremesa;33;1
+Bolo de Morango;16.90;1034;Morango, farinha, açúcar;300;false;bolo_morango.jpg;Bolo fresco;Sweet Treats;Sobremesa;34;2
+Pão de Alho;9.90;1036;Pão, alho, manteiga;150;false;pao_alho.jpg;Acompanhamento saboroso;Pão de Alho Shop;Snack;36;4
+Sopa de Abóbora;12.50;1037;Abóbora, caldo, especiarias;200;true;sopa_abobora.jpg;Sopa reconfortante;Sopa do Dia;Sopa;37;1
+Bolo de Baunilha;13.90;1038;Farinha, açúcar, baunilha;300;false;bolo_baunilha.jpg;Bolo clássico;Sweet Treats;Sobremesa;38;2
+Tacos de Frango;21.50;1039;Tortilha, frango, alface, salsa;200;false;tacos_frango.jpg;Tacos saborosos;Mexican Grill;Taco;39;3
+Salada de Frutas;9.00;1040;Frutas variadas;0;true;salada_frutas.jpg;Refrescante e saudável;Frutaria;Salada;40;4
+Pasta de Frango;20.90;1042;Massa, frango, molho;300;false;pasta_frango.jpg;Pasta saborosa;Pasta House;Massa;42;2
+Bolo de Limão;14.00;1044;Limao, farinha, açúcar;250;false;bolo_limao.jpg;Bolo refrescante;Sweet Treats;Sobremesa;44;4
+Torta de Maçã;13.90;1048;Massa, maçã, canela;300;false;torta_maca.jpg;Torta clássica;Sweet Treats;Sobremesa;48;4
+molho_tomate;14.50;1049;Tomate seco, azeite, alho;200;true;molho_tomate.jpg;Patê saboroso;Patê & Cia;Condimento;49;1
+Burguer;20.00;1050;Pão, quinoa, alface, tomate;250;true;burguer.jpg;Alternativa saudável;Burger House;Hambúrguer;50;2

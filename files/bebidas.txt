@@ -1,3 +1,49 @@
-Coca-Cola;10.00;7894900010015;true;Coca-Cola;600.00;1231445216524
-Suco de Laranja;11.00;7894900020030;true;Del Valle;1.00;123456758456
-Cerveja Pilsen;12.00;7894900030040;false;Heineken;500.00;46374330846
+Coca-Cola;5.99;1001;true;Coca-Cola;350.0;Refrigerante de cola clássico;coca_cola.jpg
+Pepsi;5.49;1002;true;Pepsi;350.0;Refrigerante de cola concorrente;pepsi.jpg
+Fanta Laranja;4.99;1003;true;Coca-Cola;350.0;Refrigerante de laranja;fanta_laranja.jpg
+Sprite;5.29;1004;true;Coca-Cola;350.0;Refrigerante de limão;sprite.jpg
+Guaraná Antarctica;4.79;1005;true;Ambev;350.0;Refrigerante de guaraná;guarana.jpg
+Schweppes Citrus;5.19;1006;true;Coca-Cola;350.0;Refrigerante cítrico;schweppes_citrus.jpg
+Red Bull;9.99;1007;true;Red Bull;250.0;Energético clássico;redbull.jpg
+Monster Energy;8.99;1008;true;Monster;473.0;Energético potente;monster.jpg
+Café Pilão;15.99;1009;false;Pilão;500.0;Café torrado e moído;cafe_pilao.jpg
+Café 3 Corações;14.49;1010;false;3 Corações;500.0;Café tradicional;cafe_3coracoes.jpg
+Chá Verde Leão;6.99;1011;true;Leão;300.0;Chá verde gelado;cha_verde_leao.jpg
+Chá Matte Leão;5.99;1012;true;Leão;350.0;Chá mate gelado;cha_matte_leao.jpg
+Voss Água Artesiana;2.99;1013;true;Bonafont;500.0;Água mineral natural;voss_agua_artesiana.jpg
+Água com Gás Perrier;9.49;1014;true;Perrier;330.0;Água gaseificada premium;agua_perrier.jpg
+H2OH! Limão;4.99;1015;true;Pepsi;500.0;Água gaseificada sabor limão;h2oh_limao.jpg
+Del Valle Uva;6.99;1016;true;Coca-Cola;1000.0;Suco de uva integral;del_valle_uva.jpg
+Ades Soja Maçã;5.49;1017;true;Ades;1000.0;Bebida de soja sabor maçã;ades_maca.jpg
+Suco Natural One Laranja;8.99;1018;true;Natural One;900.0;Suco de laranja integral;natural_one_laranja.jpg
+Tônica Antarctica;4.99;1019;true;Ambev;350.0;Refrigerante tônica;tonica_antarctica.jpg
+Milkshake Ovomaltine;12.99;1020;true;Bob’s;500.0;Milkshake de ovomaltine;milkshake_ovomaltine.jpg
+Nescau Pronto;4.99;1021;true;Nestlé;200.0;Bebida láctea achocolatada;nescau_pronto.jpg
+Toddy Pronto;4.99;1022;true;Toddy;200.0;Bebida láctea achocolatada;toddy_pronto.jpg
+Yakult;2.49;1023;true;Yakult;80.0;Leite fermentado;yakult.jpg
+Vinho Tinto Chileno;39.99;750;false;Concha y Toro;750.0;Vinho tinto seco chileno;vinho_tinto_chileno.jpg
+Cerveja Heineken;7.99;1025;true;Heineken;330.0;Cerveja puro malte;cerveja_heineken.jpg
+Cerveja Budweiser;6.99;1026;true;Budweiser;350.0;Cerveja americana;cerveja_budweiser.jpg
+Cerveja Skol;4.99;1027;true;Ambev;350.0;Cerveja brasileira;cerveja_skol.jpg
+Whisky Jack Daniel’s;149.99;1028;false;Jack Daniel’s;1000.0;Whisky americano;whisky_jackdan iels.jpg
+Vodka Absolut;89.99;1029;false;Absolut;1000.0;Vodka sueca;vodka_absolut.jpg
+Gin Tanqueray;109.99;1030;false;Tanqueray;750.0;Gin premium;gin_tanqueray.jpg
+Rum Bacardi;89.99;1031;false;Bacardi;1000.0;Rum caribenho;rum_bacardi.jpg
+Cachaça 51;18.99;1032;false;51;1000.0;Cachaça tradicional;cachaca_51.jpg
+Energético TNT;7.99;1033;true;TNT;473.0;Energético potente;energetico_tnt.jpg
+Chá Preto Twinings;10.99;1034;false;Twinings;100.0;Chá preto premium;cha_preto_twinings.jpg
+Cerveja Corona;8.49;1035;true;Corona;330.0;Cerveja mexicana;cerveja_corona.jpg
+Cerveja Stella Artois;7.99;1036;true;Stella Artois;330.0;Cerveja belga;cerveja_stella.jpg
+Cerveja Brahma;4.99;1037;true;Ambev;350.0;Cerveja brasileira;cerveja_brahma.jpg
+Café Espresso Nespresso;29.99;1038;false;Nespresso;10.0;Cápsulas de café;cafe_nespresso.jpg
+Suco de Caju Maguary;7.49;1039;true;Maguary;1000.0;Suco concentrado de caju;suco_caju_maguary.jpg
+Gatorade Laranja;5.99;1040;true;Gatorade;500.0;Bebida isotônica;gatorade_laranja.jpg
+Powerade Azul;6.49;1041;true;Powerade;500.0;Bebida isotônica;powerade_azul.jpg
+Isotônico Marathon;4.99;1042;true;Marathon;500.0;Reidratante isotônico;isotonico_marathon.jpg
+Chá Branco Feel Good;6.99;1043;true;Feel Good;330.0;Chá branco gelado;cha_branco_feelgood.jpg
+Leite Integral Italac;6.49;1044;true;Italac;1000.0;Leite integral;leite_italac.jpg
+Leite Desnatado Piracanjuba;6.29;1045;true;Piracanjuba;1000.0;Leite desnatado;leite_piracanjuba.jpg
+Iogurte Grego Vigor;3.99;1046;true;Vigor;120.0;Iogurte grego sabor morango;iogurte_grego_vigor.jpg
+Shake Herbalife Chocolate;89.99;1047;false;Herbalife;550.0;Shake proteico sabor chocolate;shake_herbalife.jpg
+Água de Coco Sococo;7.99;1048;true;Sococo;1000.0;Água de coco natural;agua_coco_sococo.jpg
+Tônica Schweppes;5.49;1049;true;Schweppes;350.0;Refrigerante tônica premium;tonica_schweppes.jpg

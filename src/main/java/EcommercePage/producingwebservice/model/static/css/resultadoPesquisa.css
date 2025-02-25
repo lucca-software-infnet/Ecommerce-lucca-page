@@ -1,0 +1,179 @@
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.filter-section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section h6 {
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 200px;  
+     object-fit: contain;   
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card-text:last-child {
+    font-weight: bold;
+    color: #b12704; 
+}
+
+.row-cols-md-5 {
+    margin-top: 20px;
+    
+}
+
+
+.search-bar {
+    position: relative;
+}
+
+
+
+.btn-search {
+    background-color: #febd69;
+    border: none;
+    color: #111;
+}
+
+.btn-search:hover {
+    background-color: #f3a847;
+}
+
+
+
+/* //////////////////////////////////// */
+ 
+
+.navbar {
+    background-color: #6a0dad;
+    height: 150px;
+    /* Ajuste a altura da navbar */
+    z-index: 100;
+    
+}
+#suggestions {
+    position: absolute; /* Permite que o div de sugestões se sobreponha ao input */
+    background-color: white;
+    border-radius: 4px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
+    width: 100%; /* Faz o container ocupar 100% da largura do input */
+    top: 100%; /* Coloca o suggestions logo abaixo do input */
+    left: 0; /* Alinha à esquerda do input */
+    margin-top: 5px; /* Espaço entre o input e o suggestions */
+    padding-left: 5%;
+  }
+
+  .suggestion-item:hover {
+    background-color: rgba(168, 168, 168, 0.562);
+  }
+
+  .container {
+    height: 150px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    /* Cor da marca */
+}
+
+.navbar-brand:hover {
+    color: #ddd;
+    /* Cor ao passar o mouse */
+}
+
+#navbarNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  search-bar {
+    width: 100%;
+    max-width: 80%;
+    /* Ajuste a largura do campo de busca */
+    margin: 0 20px;
+    /* Margem para espaçamento */
+}
+
+.search-bar {
+    position: relative; /* Necessário para o posicionamento absoluto do suggestions */
+  }
+
+  #botao {
+    background-color: white;
+    color: black;
+    border: none;
+}
+form {
+    width: 80%;
+    position: relative;
+    height: 50px;
+}
+
+.collapse {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+  
+.btn-search:hover {
+    background-color: #555;
+}
+#link-navbar{
+    color: white;
+  }
+
+  #product-grid{
+     max-width: 1300px;
+     min-width: 900px;
+  }
+  
+  
+  @media (max-width: 991px) {
+      .search-bar {
+          margin: 10px 0;
+      }
+  }

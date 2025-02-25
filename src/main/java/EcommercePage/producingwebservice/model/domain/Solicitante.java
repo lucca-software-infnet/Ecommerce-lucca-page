@@ -120,6 +120,7 @@ public class Solicitante implements UserDetails {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 
 	public Endereco getEndereco() {
 		return endereco;

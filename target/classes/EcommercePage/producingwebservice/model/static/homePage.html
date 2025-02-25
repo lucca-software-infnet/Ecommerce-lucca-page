@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space - Home</title>
+  <link rel="stylesheet" href="css/styleHomePage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Space</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex search-bar">
+            <input class="form-control me-2 pesquisa" type="search"
+              placeholder="Buscar produtos, marcas e muito mais..." aria-label="Search">
+            <button id="botao" class="btn btn-search" type="submit">Buscar</button>
+            <div id="suggestions" class="suggestions"></div>
+          </form>
+
+        </div>
+
+        <ul class="navbar-nav ms-lg-3">
+          <li class="nav-item">
+            <a id="link-navbar" class="nav-link" href="#">Crie a sua conta</a>
+          </li>
+          <li class="nav-item">
+            <a id="link-navbar" class="nav-link" href="login.html">Entre</a>
+          </li>
+          <li class="nav-item">
+            <a id="link-navbar" class="nav-link" href="#">Compras</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Carousel -->
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div id="v" class="carousel-item active">
+        <img src="image/7c639b7b80bc3924c771c151c51b9922.jpg" class="d-block w-100 mx-auto" alt="Oferta 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Promoção Especial</h5>
+          <p>Descontos incríveis para você aproveitar.</p>
+        </div>
+      </div>
+      <div id="v" class="carousel-item">
+        <img src="image/carouselPrincipal.webp" class="d-block w-100 mx-auto" alt="Oferta 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Frete Grátis</h5>
+          <p>Em todos os produtos selecionados.</p>
+        </div>
+      </div>
+      <div id="v" class="carousel-item">
+        <img src="image/carouselPrincipal 2.webp">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Novidades</h5>
+          <p>Confira os lançamentos exclusivos.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+  <div class="container gridproduto1">
+    <div class="row gx-4 gy-4">
+      <!-- Primeiro grid -->
+      <div class="col-md-6">
+        <div class="text-center border p-3">
+          <div class="row row-cols-2 g-3">
+            <div class="col"><a class="linkImagemGrid"><img class="imagemGrid1" src="image/perifericos.jpg" alt=""></a>
+            </div>
+            <div class="col"><a><img class="imagemGrid1" src="image/notboock.jpg" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/jogos.jpg" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/cadeira gamer.jpg" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="text-center border p-3">
+          <div class="row row-cols-2 g-3">
+            <div class="col"><a><img class="imagemGrid1" src="image/roupa de cama.jpg" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/calças.jpg" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/vestidos.jpg" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/calçados.jpg" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container gridproduto2">
+    <div class="row gx-4 gy-4">
+      <!-- Segundo grid -->
+      <div class="col-md-6">
+        <div class="text-center border p-3">
+          <div class="row row-cols-2 g-3">
+            <div class="col"><a><img class="imagemGrid1" src="image/ferrramenras elétricas.webp" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/ferrramenras manuais.webp" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/medições.webp" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid1" src="image/acessórios.webp" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="text-center border p-3">
+          <div class="row row-cols-2 g-3">
+            <div class="col"><a><img class="imagemGrid6" src="image/heidlaibow.webp" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid6" src="image/heineken.webp" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid6" src="image/suco.webp" alt=""></a></div>
+            <div class="col"><a><img class="imagemGrid6" src="image/arroz.webp" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselExample" class="carousel slide carouseldois" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img src="image/7c639b7b80bc3924c771c151c51b9922.jpg" class="card-img-top" alt="Imagem 1">
+              <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text">Conteúdo do card 1.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img src="image/7c639b7b80bc3924c771c151c51b9922.jpg" class="card-img-top" alt="Imagem 2">
+              <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">Conteúdo do card 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img src="image/7c639b7b80bc3924c771c151c51b9922.jpg" class="card-img-top" alt="Imagem 3">
+              <div class="card-body">
+                <h5 class="card-title">Card 3</h5>
+                <p class="card-text">Conteúdo do card 3.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img src="image/7c639b7b80bc3924c771c151c51b9922.jpg" class="card-img-top" alt="Imagem 4">
+              <div class="card-body">
+                <h5 class="card-title">Card 4</h5>
+                <p class="card-text">Conteúdo do card 4.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img src="image/7c639b7b80bc3924c771c151c51b9922.jpg" class="card-img-top" alt="Imagem 5">
+              <div class="card-body">
+                <h5 class="card-title">Card 5</h5>
+                <p class="card-text">Conteúdo do card 5.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img src="image/7c639b7b80bc3924c771c151c51b9922.jpg" class="card-img-top" alt="Imagem 6">
+              <div class="card-body">
+                <h5 class="card-title">Card 6</h5>
+                <p class="card-text">Conteúdo do card 6.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <script src="javascript/homePage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -35,7 +35,7 @@ public class ComidaLoader implements ApplicationRunner {
             Comida comida = new Comida();
             comida.setNome(campos[0]);
             comida.setValor(Float.parseFloat(campos[1]));
-            comida.setCodigoDeBarras(Integer.parseInt(campos[2]));
+            comida.setCodigo(Integer.parseInt(campos[2]));
             comida.setIngredientes(campos[3]);
             comida.setPeso(Float.parseFloat(campos[4]));
             comida.setVegana(Boolean.parseBoolean(campos[5]));
@@ -43,7 +43,7 @@ public class ComidaLoader implements ApplicationRunner {
             comida.setDescricao(campos[7]);
             comida.setMarca(campos[8]);
             comida.setTipo(campos[9]);
-            comida.setSolicitante(new Solicitante(Integer.valueOf(campos[10])));
+            // comida.setSolicitante(new Solicitante(Integer.valueOf(campos[10])));
             comidaService.incluir(comida);
         }
         leitura.close();

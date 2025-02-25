@@ -1,9 +1,11 @@
 package EcommercePage.producingwebservice.model.service;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import EcommercePage.producingwebservice.model.domain.Produto;
 import EcommercePage.producingwebservice.model.repositories.ProdutoRepository;
@@ -23,5 +25,11 @@ public class ProdutoService {
 	public void excluir(Integer id){
 		produtoRepository.deleteById(id);
 	}
+	
+	public List<Produto> buscarPorNome(String nome) {
+		System.out.println("Chamando o repositório com o nome: " + nome);
+        return produtoRepository.findByNomeContainingIgnoreCase(nome);
+    }
+   
 	
 }

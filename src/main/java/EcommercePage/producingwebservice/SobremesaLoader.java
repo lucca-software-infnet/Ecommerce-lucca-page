@@ -29,26 +29,35 @@ public class SobremesaLoader implements ApplicationRunner {
 		
 		String[] campos = null;
 		
-		while(linha != null) {
-			campos = linha.split(";");
+	 while(linha != null) {
+		 campos = linha.split(";");
 
-			Sobremesa sobremesa = new Sobremesa();
-			sobremesa.setNome(campos[0]);
-			sobremesa.setValor(Float.valueOf(campos[1]));
-			sobremesa.setCodigo(Integer.valueOf(campos[2]));
-			sobremesa.setQuantidade(Integer.valueOf(campos[3]));
-			sobremesa.setDoce(Boolean.valueOf(campos[4]));
-			sobremesa.setInformacao(campos[5]);
-			
-			sobremesaService.incluir(sobremesa);
-			
-			linha = leitura.readLine();
-		}
+		 // Verifica se a linha contém o número esperado de campos (8 campos)
+		 if (campos.length < 8) {
+			 System.err.println("Linha inválida: " + linha);
+			 linha = leitura.readLine();
+			 continue; // Pula para a próxima linha
+		 }
 
-		for(Sobremesa sobremesa : sobremesaService.obterLista()) {
-			System.out.println("[SOBREMESA] " + sobremesa);			
-		}
-				
-		leitura.close();
+		 Sobremesa sobremesa = new Sobremesa();
+		 sobremesa.setNome(campos[0]);
+		 sobremesa.setValor(Float.valueOf(campos[1]));
+		 sobremesa.setCodigo(Integer.valueOf(campos[2]));
+		 sobremesa.setQuantidade(Integer.valueOf(campos[3]));
+		 sobremesa.setDoce(Boolean.valueOf(campos[4]));
+		 sobremesa.setInformacao(campos[5]);
+		 sobremesa.setDescricao(campos[6]);
+		 sobremesa.setImagem(campos[7]);
+		 
+		 sobremesaService.incluir(sobremesa);
+		 
+		 linha = leitura.readLine();
+	 }
+
+	 for(Sobremesa sobremesa : sobremesaService.obterLista()) {
+		 System.out.println("[SOBREMESA] " + sobremesa);			
+	 }
+			 
+	 leitura.close();
 	}
 }

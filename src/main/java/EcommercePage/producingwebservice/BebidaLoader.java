@@ -30,10 +30,12 @@ public class BebidaLoader implements ApplicationRunner {
             Bebida bebida = new Bebida();
             bebida.setNome(campos[0]);
             bebida.setValor(Float.parseFloat(campos[1]));
-            bebida.setCodigoDeBarras(campos[2]);
+            bebida.setCodigo(Integer.parseInt(campos[2]));
             bebida.setGelada(Boolean.parseBoolean(campos[3]));
             bebida.setMarca(campos[4]);
             bebida.setPeso(Float.parseFloat(campos[5]));
+            bebida.setDescricao(campos[6]);
+            bebida.setImagem(campos[7]); 
 
             bebidaService.incluir(bebida);
             

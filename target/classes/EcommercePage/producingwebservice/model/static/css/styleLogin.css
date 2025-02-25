@@ -1,0 +1,57 @@
+body {
+    background: linear-gradient(to bottom, #6a0dad, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.login-container .btn-primary {
+    background: linear-gradient(to right, #6a0dad, #8b00ff);
+    border: none;
+}
+.login-container .btn-primary:hover {
+    background: linear-gradient(to right, #580a91, #7500e1);
+}
+.form-control {
+    border-radius: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+}
+.login-container .form-label {
+    font-weight: 500;
+    color: #ffffff;
+}
+.login-container p a {
+    color: #8b00ff;
+    text-decoration: none;
+}
+.login-container p a:hover {
+    color: #7500e1;
+}
