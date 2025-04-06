@@ -1,25 +1,27 @@
 package EcommercePage.producingwebservice.model.auth.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 import EcommercePage.producingwebservice.model.auth.services.AuthorizationService;
+
 import EcommercePage.producingwebservice.model.dtos.AuthenticationDto;
 import EcommercePage.producingwebservice.model.dtos.RegisterDto;
 
-import javax.validation.Valid;
 
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("auth")
 public class AuthController {
-   
+
     @Autowired
-    AuthorizationService authorizationService; 
+    private AuthorizationService authorizationService;
+
 
     @PostMapping("/login")
     public ResponseEntity<Object> login(@RequestBody @Valid AuthenticationDto authenticationDto) {
@@ -27,8 +29,11 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<Object> register(@RequestBody RegisterDto registerDto) {
-        return authorizationService.register(registerDto); 
+    public ResponseEntity<Object> register(@RequestBody @Valid RegisterDto registerDto) {
+        try {
+            return authorizationService.register(registerDto);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao registrar: " + e.getMessage());
+        }
     }
 }
-

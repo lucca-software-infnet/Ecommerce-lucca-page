@@ -1,21 +1,20 @@
 package EcommercePage.producingwebservice.model.security;
 
 import java.io.IOException;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import EcommercePage.producingwebservice.model.repositories.UserRepository;
-
-import org.springframework.security.core.context.SecurityContextHolder;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @Component
 public class SecurityFilter extends OncePerRequestFilter {
@@ -32,25 +31,29 @@ public class SecurityFilter extends OncePerRequestFilter {
         System.out.println("Token Recuperado: " + token);
 
         if (token != null) {
+            var email = tokenService.validateToken(token);
+            System.out.println("Email do Token: " + email);
+            UserDetails user = userRepository.findByEmail(email);
+            System.out.println("Usuário encontrado: " + user);
             
-                var email = tokenService.validateToken(token);
-                System.out.println("Email do Token: " + email); 
-                UserDetails user = userRepository.findByEmail(email);
-                System.out.println("Usuário encontrado: " + user); 
-                if (user != null) {
-                    // Define a autenticação para o usuário encontrado
-                    var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
-                    SecurityContextHolder.getContext().setAuthentication(authentication);
-                }
+            if (user != null) {
+                // Define a autenticação para o usuário encontrado
+                var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+
+                // Criar sessão e armazenar usuário
+                HttpSession session = request.getSession(true);
+                session.setAttribute("user", user);
             }
+        }
+
         filterChain.doFilter(request, response);
     }
 
     private String recoverToken(HttpServletRequest request) {
         var authHeader = request.getHeader("Authorization");
-        System.out.println("Cabeçalho de Autorização: " + authHeader); 
+        System.out.println("Cabeçalho de Autorização: " + authHeader);
         if (authHeader == null || !authHeader.startsWith("Bearer ")) return null;
         return authHeader.replace("Bearer ", "");
     }
 }
-

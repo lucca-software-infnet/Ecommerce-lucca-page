@@ -9,10 +9,11 @@ pesquisa.addEventListener("input", () => {
         return;
     }
     
+    // Faz a requisição para buscar produtos sem o token
     fetch(`http://localhost:8080/api/produto/buscar?nome=${query}`)
     .then(response => response.json())
     .then(data => {
-      sugestoesContainer.style.display = 'table-column';
+        sugestoesContainer.style.display = 'table-column';
         sugestoesContainer.innerHTML = "";
         let sugestoes = data.slice(0, 10);
         sugestoes.forEach(produto => {
@@ -45,3 +46,47 @@ pesquisa.addEventListener("keypress", (event) => {
         carregar();
     }
 });
+
+// Obtém o token do usuário do localStorage
+const token = localStorage.getItem('token');
+const linkEntrar = document.getElementById('link-entrar');
+
+// Verifica se há um token
+if (token) {
+    // Faz a requisição para obter os dados do usuário
+    fetch('http://localhost:8080/users/me', {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.status === 401) {
+            localStorage.removeItem('token'); // Remove o token inválido
+            window.location.href = 'login.html'; // Redireciona para login
+            return;
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data && data.nome) {
+            linkEntrar.textContent = data.nome; // Exibe o nome do usuário
+            linkEntrar.style.cursor = "pointer"; // Adiciona cursor de clique
+            linkEntrar.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'perfil.html'; // Redireciona para perfil
+            });
+        }
+    })
+    .catch(error => console.error('Erro ao buscar os dados:', error));
+} else {
+    // Se não houver token, mantém o link "Entrar" normal
+    linkEntrar.href = 'login.html';
+}
+
+// Função para logout
+function logout() {
+    localStorage.removeItem('token'); // Remove o token
+    window.location.href = 'login.html'; // Redireciona para login
+}

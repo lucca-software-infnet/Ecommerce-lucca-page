@@ -25,7 +25,7 @@ public class Bebida extends Produto {
         this.peso = peso;
         this.descricao = descricao;
         this.imagem = imagem;
-    }
+    }   
 
     @Override
     public String toString() {

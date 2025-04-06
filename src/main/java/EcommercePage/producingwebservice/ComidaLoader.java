@@ -11,7 +11,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import EcommercePage.producingwebservice.model.domain.Comida;
-import EcommercePage.producingwebservice.model.domain.Solicitante;
 import EcommercePage.producingwebservice.model.service.ComidaService;
 
 @Order(3)
